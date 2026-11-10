@@ -345,11 +345,11 @@
     <p class="sanity-check" id="sanity" hidden></p>
     <article class="article" id="article"></article>
     <nav class="chapter-nav" aria-label="章节导航">
-      <button class="nav-btn" id="nav-prev" type="button" title="上一章（Ctrl+←）">← 上一章</button>
+      <button class="nav-btn" id="nav-prev" type="button" title="上一章（←）">← 上一章</button>
       <button class="nav-btn" id="nav-first" type="button" title="回到本章开头">本章开头</button>
       <button class="nav-btn" id="nav-toc" type="button">目录</button>
       <button class="nav-btn" id="nav-restart" type="button" title="从本章开头重新读">从头读</button>
-      <button class="nav-btn" id="nav-next" type="button" title="下一章（Ctrl+→）">下一章 →</button>
+      <button class="nav-btn" id="nav-next" type="button" title="下一章（→）">下一章 →</button>
     </nav>
   </main>
 
@@ -2082,7 +2082,7 @@ function bindEvents() {
     if (ui.reader.hidden || ui.scrim.classList.contains('show')) return;
 
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); pageStep(e.key === 'ArrowDown' ? 1 : -1); }
-    else if ((e.key === 'ArrowRight' || e.key === 'ArrowLeft') && (e.ctrlKey || e.altKey || e.metaKey)) { e.preventDefault(); goChapter(e.key === 'ArrowRight' ? 1 : -1); }
+    else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); goChapter(e.key === 'ArrowRight' ? 1 : -1); }
     else if (e.key === 't' || e.key === 'T') cycleTheme();
     else if (e.key === 'f' || e.key === 'F') toggleFullscreen();
   });
