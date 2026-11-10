@@ -1,0 +1,10 @@
+* text=auto
+
+# 脚本/批处理保留各自原生换行
+*.sh   text eol=lf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.py   text eol=lf
+*.md   text eol=lf
+*.html text eol=lf
+*.json text eol=lf

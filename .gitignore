@@ -1,0 +1,19 @@
+# 运行时生成 / 本机私有：不进仓库
+static/
+runtime/
+
+# 书：版权内容，绝不上传
+*_静读书目.json
+*.txt
+*.epub
+
+# Python
+__pycache__/
+*.py[cod]
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
